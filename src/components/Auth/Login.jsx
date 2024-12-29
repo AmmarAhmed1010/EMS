@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-const Login = ({handleLogin}) => {
+const Login = ({ handleLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const submitHandler = (e) => {
     e.preventDefault();
-    handleLogin(email,password)
+    handleLogin(email, password);
 
     // Reset fields (optional)
     setEmail('');
@@ -14,14 +14,21 @@ const Login = ({handleLogin}) => {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-gray-100">
-      <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
-        <h1 className="text-3xl font-semibold text-center text-gray-700 mb-6">Login</h1>
-        
+    <div className="h-screen flex items-center justify-center bg-gray-100 px-4">
+      <div className="w-full max-w-md p-6 sm:p-8 bg-white rounded-lg shadow-lg">
+        <h1 className="text-2xl sm:text-3xl font-semibold text-center text-gray-700 mb-4 sm:mb-6">
+          Login
+        </h1>
+
         <form onSubmit={submitHandler}>
           {/* Email Input */}
           <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-600">Email</label>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-600"
+            >
+              Email
+            </label>
             <input
               type="email"
               id="email"
@@ -35,7 +42,12 @@ const Login = ({handleLogin}) => {
 
           {/* Password Input */}
           <div className="mb-6">
-            <label htmlFor="password" className="block text-sm font-medium text-gray-600">Password</label>
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-600"
+            >
+              Password
+            </label>
             <input
               type="password"
               id="password"
@@ -55,8 +67,6 @@ const Login = ({handleLogin}) => {
             Login
           </button>
         </form>
-
-     
       </div>
     </div>
   );
