@@ -8,3 +8,8 @@
 #alltask::-webkit-scrollbar{
     display: none;
 }
+
+/* Set the background color to #1c1c1c for the entire page */
+body {
+    background-color: #1c1c1c;
+}

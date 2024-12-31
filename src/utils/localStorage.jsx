@@ -200,5 +200,5 @@ const employees = [
  const admin = JSON.parse(localStorage.getItem("admin"))
  const employees = JSON.parse(localStorage.getItem("employees"))
 
- console.log(admin, employees)
+ return{employees,admin}
  }
